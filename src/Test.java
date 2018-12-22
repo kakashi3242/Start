@@ -1,4 +1,5 @@
-import java.util.Scanner;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 public class Test {
     //    public void putAge() {
@@ -29,16 +30,23 @@ public class Test {
 //        System.out.println("Value of b is " + b);
 //    }
 
-    public static void main(String[] args) {
+    private static String nowDate(){
 
-        int x = 10;
+        Date date = new Date();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
-        while (x <= 500) {
-            System.out.println(x);
-            x++;
-        }
-
+        return simpleDateFormat.format(date);
 
     }
+
+
+    public static void main(String[] args) {
+
+        String nowDate = nowDate();
+
+        System.out.println(nowDate);
+
+    }
+
 
 }
